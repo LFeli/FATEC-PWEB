@@ -224,9 +224,7 @@ nav.show .line:nth-child(2), nav.show .line:nth-child(3){
 
 }
 
-nav .checkbox-component{
-    display: none;
-}
+
 
 /* post */
 
@@ -366,6 +364,60 @@ footer .back-to-top{
     line-height: 1.6rem;
 }
 
+
+nav .checkbox-component{
+    display: none;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+nav .moon-switch{
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: var(--teste);
+    z-index: 2;
+}
+
+nav .checkbox-component input[type="checkbox"]{
+    width: 4.8rem;
+    height: 2.2rem;
+
+    position: relative;
+    -webkit-appearance: none;
+    background-color: var(--base-logo);
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+nav .checkbox-component input[type="checkbox"]::before{
+    content: '';
+    width: 2.4rem;
+    height: 2.4rem;
+
+    position: absolute;
+    z-index: 2;
+    top: -1px;
+    left: -1px;
+
+    background: #818181;
+    box-shadow: inset 2px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+
+    transition: 0.15s;
+}
+
+
+nav .checkbox-component input:checked[type="checkbox"]::before{
+    left: 2.4rem;
+    background-color: #00B2FF;
+}
+
+nav.show .checkbox-component{
+    display: flex;
+    position: absolute;
+}
+
 /* ---------------------------------------------------   864PX     ------------------------------------------------------------------- */
 
 @media (min-width: 864px){
@@ -377,6 +429,14 @@ footer .back-to-top{
     nav .menu{
         opacity: 1;
         visibility: visible;
+
+        height: auto;
+        width: auto;
+        position: static;
+        z-index: 0;
+        transition: none;
+        background-color: initial;
+        backdrop-filter: initial;
     }
 
     nav .nav-logo:hover{
@@ -408,51 +468,13 @@ footer .back-to-top{
         display: none;
     }
 
+    nav.show .checkbox-component{
+        display: none;
+        position: static;
+    }
+
     nav .checkbox-component{
         display: flex;
-        align-items: center;
-        gap: 1.6rem;
-    }
-
-    nav .moon-switch{
-        width: 2.4rem;
-        height: 2.4rem;
-        background-image: var(--teste);
-    }
-    
-    nav .checkbox-component input[type="checkbox"]{
-        width: 4.8rem;
-        height: 2.2rem;
-    
-        position: relative;
-        -webkit-appearance: none;
-        background-color: var(--base-logo);
-        border-radius: 50px;
-        cursor: pointer;
-
-    }
-    
-    nav .checkbox-component input[type="checkbox"]::before{
-        content: '';
-        width: 2.4rem;
-        height: 2.4rem;
-    
-        position: absolute;
-        z-index: 2;
-        top: -1px;
-        left: 1px;
-    
-        background: #818181;
-        box-shadow: inset 2px 0px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 50%;
-    
-        transition: 0.3s;
-    }
-
-    
-    nav .checkbox-component input:checked[type="checkbox"]::before{
-        left: 2.4rem;
-        background-color: #00B2FF;
     }
 
     .main-tittle{
