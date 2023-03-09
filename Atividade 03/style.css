@@ -59,25 +59,18 @@ body {
 
 
 
-@keyframes slide{
-    from{
-        height: 0%;
-    }
-
-    to{
-        height: 100vh;
-    }
-}
-
-@keyframes slideW{
+/* @keyframes slide{
     0%{
-        width: 0%;
+        opacity: 0;
+        padding-top: -2.5rem;
     }
 
     100%{
-        width: 100%;
+        opacity: 1;
+        padding-top: -2.5rem;
+
     }
-}
+} */
 
 
 /* Header */
@@ -171,12 +164,12 @@ nav .icon-menu{
 }
 
 
-nav.show .menu{
-    opacity: 1;
-    visibility: visible;
+nav .menu{
+    opacity: 0;
+    visibility: hidden;
     display: block;
 
-    height: 100vh;
+    height: 0px;
     width: 100vw;
 
     position: fixed;
@@ -186,7 +179,14 @@ nav.show .menu{
     background: rgba(34, 34, 34, 0.75);
     backdrop-filter: blur(2.0rem);
     z-index:1;
-    transition: all	0.6s;
+
+    transition: 0.4765s;
+}
+
+nav.show .menu{
+    opacity: 1;
+    visibility: visible;
+    height: 100vh;
 }
 
 nav.show .menu ul{
@@ -195,7 +195,9 @@ nav.show .menu ul{
     gap: 3.2rem;
     font-weight: 700;
     font-size: 3.2rem;
-    margin: 10.0rem 3.0rem 0 3.0rem;
+    /* margin: 10.0rem 3.0rem 0 3.0rem; */
+    margin: 0 3.0rem;
+    padding-top: 10.0rem;
 
     height: 100vh;
 }
@@ -319,7 +321,7 @@ nav .checkbox-component{
 /* Footer */
 footer{
     width: 100vw;
-    height: 26.0rem;
+    height: 27.0rem;
     background-color: var(--footer);
 
     margin-top: 10.0rem;
