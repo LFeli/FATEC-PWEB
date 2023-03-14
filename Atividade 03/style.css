@@ -215,8 +215,13 @@ nav.show .line:nth-child(1){
 
 }
 
-nav.show .line:nth-child(2), nav.show .line:nth-child(3){
-    transform: rotate(-135deg);
+nav.show .line:nth-child(2){
+    opacity: 0;
+    visibility: none;
+}
+
+nav.show .line:nth-child(3){
+    transform: rotate(45deg);
 
     position: absolute;
     top: 8;
@@ -302,7 +307,7 @@ nav.show .line:nth-child(2), nav.show .line:nth-child(3){
     line-height: 2.9rem;
 }
 
-.content-post{
+article p{
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 3.2rem;    
@@ -312,7 +317,7 @@ nav.show .line:nth-child(2), nav.show .line:nth-child(3){
     margin-bottom: 7.2rem;
 }
 
-.content-post:nth-last-child(1){
+article:nth-last-child(1) p{
     margin-bottom: 0rem;
 }
 
@@ -537,7 +542,7 @@ nav.show .checkbox-component{
         margin: 0 auto;
     }
 
-    .content-post.container{
+    .post.container{
         max-width: 930px;
         margin: 0 auto;
     }
