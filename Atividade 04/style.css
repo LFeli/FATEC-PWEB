@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;600&family=Ubuntu+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    font-size: 62.5%;
+
+    /* Colors */
+    --bg: #292C35;
+    --tittle: #FFFFFF;
+    --text: #E0E0E0;
+    --footer: #161616;
+    --green: #009E47;
+
+    /* Fonts */
+    --standard-font: 'Poppins', sans-serif;
+    --logo-font: 'Inter', sans-serif;
+    --footer-font: font-family: 'Ubuntu Mono', monospace;
+}
+
+a{
+    color: var(--text);
+}
+
+a:hover{
+    color: var(--tittle);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-size: 2.0rem;
+    font-family: var(--standard-font);
+    background-color: var(--bg);
+    color: var(--text);
+    font-weight: 500;
+    line-height: 3.0rem;
+}
+
+.container{
+    max-width: 143.0rem;
+    margin: 0 auto;
+}
+
+.tittle{
+    color: var(--tittle);
+
+    font-weight: 600;
+    font-size: 4.0rem;
+    line-height: 6.0rem;
+}
+
+/* Logo */
+
+.nav-logo{
+    width: 48px;
+    height: 48px;
+    color: var(--text);
+
+    font-family: var(--logo-font);
+    font-weight: 400;
+    font-size: 20px;
+    background-color: rgba(87, 87, 87, 0.35);
+    border-radius: 0.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+}
+
+.nav-logo:hover{
+    background-color: var(--footer);
+    color: var(--text);
+
+    transition: all 0.4s;
+}
+
+
+/* Cotent */
+.wrapper-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 12.0rem;
+}
+
+
+h1{
+    margin-top: 16.0rem;
+    margin-bottom: 8.0rem;
+}
+
+.wrapper-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-content > img{
+    max-height: 24.0rem;
+
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+    border-radius: 8px;
+}
+
+.wrapper-text{
+    max-width: 80.0rem;
+}
+
+.wrapper-content .tittle{
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+
+    margin-bottom: 3.2rem;
+}
+
+
+.PS1, .PS3, .PS5{
+    flex-direction: row-reverse;
+}
+
+h2{
+    margin-top: 16.0rem;
+    margin-bottom: 3.2rem;
+}
+
+.green-link{
+    color: var(--green);
+}
+
+.green-link:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+
+/* Footer */
+
+footer{
+    width: 100%;
+    height: 18.0rem;
+    background-color: var(--footer);
+
+    margin-top: 12.0rem;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 18.0rem;
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5.6rem;
+    padding-bottom: 6.8rem;
+}
+
+.social-medias{
+    height: 3.2rem;
+    display: flex;
+    gap: 3.2rem;
+
+    margin-right: 3.2rem;
+}
+
+footer .back-to-top{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 0.6rem;
+
+    background-color: #23262E;
+
+    display: grid;
+    place-content: center;
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-bottom span{
+    font-family: 'Ubuntu Mono', monospace;
+    color: #009E47;
+
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 1.6rem;
+}
+
+.social-medias a{
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-medias a:hover{
+    border-radius: 0.6rem;
+    background-color: #23262E;
+
+    transition: 0.5s;
+}
