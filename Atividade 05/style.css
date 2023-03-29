@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+:root {
+    font-size: 62.5%;
+
+    /* Colors */
+    --bg: #1D1D1D;
+    --bg-alt: #161616;
+    --font: #E0E0E0;
+    --font-hover: #FFFFFF;
+    --card-bg: #2C2C2C;
+    --button-color: #4E6990;
+    --button-color-hover: #3164AD;
+    --terminal-green: #009E47;
+    --logo-bg: rgba(87, 87, 87, 0.35);
+}
+
+.light-mode:root{
+    --bg: #E7E7E7;
+    --bg-alt: #161616;
+    --font: #353535;
+    --font-hover: #000000;
+    --card-bg: #FFFFFF;
+    --button-color: #4E6990;
+    --button-color-hover: #3164AD;
+    --terminal-green: #009E47;
+    --logo-bg: rgba(87, 87, 87, 0.35);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {  
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--font);
+    overflow-x: hidden;
+}
+
+a{
+    color: var(--font);
+}
+
+a:hover{
+    color: var(--font-hover);
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16.0rem auto 12.0rem auto;
+
+    max-width: 32.1rem;
+    height: 6.4rem;
+    background-color: #4E6990;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+
+    font-weight: 400;
+    color: #E0E0E0;
+}
+
+.button:hover{
+    background-color: #1E385E;
+    color: #FFFFFF;
+    transition: background-color 0.5s;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------- */
+
+
+header{
+    width: 100vw;
+    height: 7.2rem;
+
+    background-color: var(--bg-alt);
+}
+
+.container{
+    max-width: 1420px;
+
+    margin: 0 auto;
+}
+
+nav{
+    height: 7.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo{
+    width: 48px;
+    height: 48px;
+    color: #E0E0E0;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: rgba(87, 87, 87, 0.35);
+    border-radius: 0.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3.2rem;
+
+    position: relative;
+}
+
+.menu-list li a{
+    color: #E0E0E0;
+}
+
+.menu-list li a:hover{
+    color: #FFFFFF;
+    transition: color 0.4s;
+
+}
+
+.menu-item{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+}
+
+.menu-item.apple::after, .menu-item.samsung::after, .menu-item.companys::after{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(./assets/icons/chevron.svg);
+    cursor: pointer;
+}
+
+ul li:hover .submenu-list{
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    opacity: 1;
+    cursor: pointer;
+
+    width: 20.0rem;
+    background-color: var(--bg-alt);
+    border-radius: 4px;
+
+}
+
+.submenu-list li{
+    padding: 1.6rem
+}
+
+.submenu-list li:hover{
+    background-color: rgba(87, 87, 87, 0.35);
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.submenu-list, .icon-menu{
+    display: none;
+    opacity: 0;
+    cursor: none;
+}
+
+
+.header-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.checkbox-component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.checkbox-component input[type="checkbox"]{
+    width: 4.8rem;
+    height: 2.3rem;
+
+    position: relative;
+    -webkit-appearance: none;
+    background-color: rgba(87, 87, 87, 0.78);
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.checkbox-component input[type="checkbox"]::before{
+    content: '';
+    width: 2.0rem;
+    height: 2.0rem;
+
+    position: absolute;
+    z-index: 2;
+    top: 1px;
+    left: 1px;
+
+    background: #D9D9D9;
+    box-shadow: inset 2px 0px 4px rgba(0, 0, 0, 0.25);  
+    border-radius: 50%;
+
+    transition: 0.15s;
+}
+
+.checkbox-component input:checked[type="checkbox"]{
+    background-color: #1878A2;
+    
+}
+
+
+.checkbox-component input:checked[type="checkbox"]::before{
+    left: 2.6rem;
+
+    background-color: #ECECEC;
+    box-shadow: inset 2px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.checkbox-component .moon-icon{
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(./assets/icons/moon.svg);
+}
+
+
+.search-icon{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+
+    background-image: url(./assets/icons/search.svg);
+}
+
+
+.tittle{
+    font-weight: 600;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    max-width: 32.1rem;
+    height: 47.3rem;
+
+    background-color: var(--card-bg);
+    border-radius: 8px;
+}
+
+.card > a{
+    height: 28.0rem;
+    display: block;
+}
+
+.card-image{
+    border-radius: 8px 8px 0px 0px;
+    width: -webkit-fill-available;
+    height: 28.0rem;
+}
+
+.card-content{
+    margin: 0 1.6rem;
+
+    height: 19.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-tittle{
+    padding-top: 1.6rem;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.card-infos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    padding-bottom: 1.6rem;
+}
+
+.card-info-post{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.card-info-post > span{
+    display: flex;
+    align-items: center;
+}
+
+.time{
+    content: "";
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(./assets/icons/clock.svg);
+
+    margin: 0 0.4rem 0 0.8rem;
+}  
+
+.card-info-post a{
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+.card-info-post a:hover{
+    text-decoration: underline;
+}
+
+.latest-news .tittle{
+    margin-top: 4.8rem;
+    margin-bottom: 3.2rem;
+}
+
+
+/* Multiple topics */
+
+.multiple-topics{
+    background-color: var(--bg-alt);
+
+    padding-top: 8.0rem;
+    padding-bottom: 8.0rem;
+
+}
+
+.multiple-topics .tittle{
+    margin: 0;
+    
+}
+
+
+.multiple-topics .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.multiple-topics .card{
+    max-width: none;
+    height: auto;
+    position: relative;
+    z-index: 1;
+
+    background-color: var(--bg-alt);
+}
+
+.cards-alt{
+    display: flex;
+    flex-direction: column;
+    gap: 4.0rem;
+
+    color: #E0E0E0;
+}
+
+.multiple-topics .card-content{
+    height: 10.0rem;
+}
+
+.multiple-topics .card-tittle{
+    padding-top: 1.0rem;
+    color: #E0E0E0;
+}
+
+
+.multiple-topics .card-infos{
+    padding-bottom: 1.0rem;
+}
+
+.multiple-topics .card-info-post a{
+    color: #E0E0E0;
+}
+
+.multiple-topics .card > img{
+    width: 100%;
+    height: 10.0rem;
+    object-fit: cover;
+    border-radius: 0.8rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* Top five */
+.multiple-topics .top-five .card{
+    display: flex;
+}
+
+.top-five .card > a{
+    display: flex;
+    width: 10.0rem;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--button-color);
+    color: #E0E0E0;
+    border-radius: 0.8rem;
+
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+}
+
+.top-five .card > a:hover{
+    color: #FFFFFF;
+    background-color: #1E385E;
+    transition: background-color 0.5s;
+}
+
+.top-five .card-infos{
+    flex-direction: row;
+    gap: 3.2rem;
+}
+
+/* Tutorials */
+.tutorials, .top-five{
+    width: 67.8rem;
+}
+
+.wrapper-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 4.0rem;
+
+    color: #E0E0E0;
+}
+
+.wrapper-top > a{
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: #E0E0E0;
+}
+
+.wrapper-top > a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+
+.Apple .wrapper-top, .Rumors .wrapper-top{
+    padding: 8.0rem 0 6.4rem 0;
+}
+
+/* Footer */
+footer{
+    width: 100vw;
+    height: 22.4rem;
+    background-color: var(--bg-alt);
+
+    margin-top: 10.0rem;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 22.4rem;
+}
+
+.footer-top{
+    display: flex;
+    align-items: normal;
+    justify-content: space-between;
+    padding-top: 5.6rem;
+    padding-bottom: 6.8rem;
+}
+
+.social-medias{
+    height: 3.2rem;
+    display: flex;
+    gap: 3.2rem;
+
+    margin-right: 3.2rem;
+}
+
+footer .back-to-top{
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 0.6rem;
+
+    background-color: #23262E;
+
+    display: grid;
+    place-content: center;
+}
+
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-bottom span{
+    font-family: 'Ubuntu Mono', monospace;
+    color: #009E47;
+
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 1.6rem;
+}
+
+.social-medias a{
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-medias a:hover{
+    border-radius: 0.6rem;
+    background-color: #23262E;
+
+    transition: 0.5s;
+}
