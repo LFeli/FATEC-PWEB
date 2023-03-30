@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-change{
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-size: 28px;
+    margin: 0 16 px;
+}
+
+h1::after{
+    content: ", Aumente o tamanho da tela ";
+}
+
+@media (min-width: 420px){
+    .color-change{
+        background-color: grey;
+    }
+    h1::after{
+        content: ", agora eu estou cinza";
+    }
+} 
+
+@media (min-width: 768px){
+    .color-change{
+        background-color: orangered;
+    }
+
+    h1::after{
+        content: ", agora eu estou laranja";
+    }
+}
+
+@media (min-width: 1024px){
+    .color-change{
+        background-color: palevioletred;
+    }
+
+    h1::after{
+        content: ", agora eu estou rosa";
+    }
+} 
+
+@media (min-width: 1366px){
+    .color-change{
+        background-color: rebeccapurple;
+    }
+
+    h1::after{
+        content: ", agora eu estou roxo";
+    }
+} 
+
+@media (min-width: 1920px){
+    .color-change{
+        background-color: yellow;
+    }
+
+    h1::after{
+        content: ", agora eu estou amarelo";
+    }
+} 
