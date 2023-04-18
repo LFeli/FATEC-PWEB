@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title> JokenPô | Lucas Felipe </title>
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="tittle" id="chamada">Pedra, Papel e Tesoura</h1>
+
+        <div class="wrapper-cards">
+            <article class="cards " id="pc">
+            <p class="name">Computador</p>
+
+            <div class="wrapper-btns">
+                <button id="Pedra"><img src="./assets/stone.png" alt="Ícone da mão fechada"></button>
+                <button id="Papel"><img src="./assets/paper.png" alt="Ícone da mão aberta"></button>
+                <button id="Tesoura"><img src="./assets/scissors.png" alt="Ícone da mão no formato de tesoura"></button>
+            </div>
+        </article>
+
+        <span class="versus">VS</span>
+
+
+        <article class="cards " id="player">
+            <p class="name">Jogador</p>
+
+            <div class="wrapper-btns" >
+                <button id="PedraPly" onclick="jogar('PEDRA')"><img src="./assets/stone.png" alt="Ícone da mão fechada"></button>
+                <button id="PapelPly" onclick="jogar('PAPEL')"><img src="./assets/paper.png" alt="Ícone da mão aberta"></button>
+                <button id="TesouraPly" onclick="jogar('TESOURA')"><img src="./assets/scissors.png" alt="Ícone da mão no formato de tesoura"></button>
+            </div>
+        </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="social-medias">
+                    <a href="https://github.com/LFeli" target="_blank"><img src="./assets/Github.svg" alt="Simbolo do github"></a>
+                    <a href="https://www.linkedin.com/in/lf-araujo/" target="_blank"><img src="./assets/Linkedin.svg" alt="Simbolo do linkedin"></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>2023 © Lucas Felipe</span>
+                <span>Todos os direitos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
