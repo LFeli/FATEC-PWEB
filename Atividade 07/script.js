@@ -16,6 +16,8 @@ const pc = document.getElementById("pc");
 const tittle = document.getElementById("chamada");
 
 function jogar(opcao) {
+    resetGame();
+
     if (opcao == "PEDRA") {
         numJogada = 0;
 
@@ -32,24 +34,16 @@ function jogar(opcao) {
         pedraBtnPlayer.style.opacity = '0.4';
         papelBtnPlayer.style.opacity = '0.4';
     }
-    
-    alert("Jogador: escolhe " + opcao);
-    
+      
     jogadaMaquina = Math.floor((Math.random() * 3))
-    console.log(`Numero do pc ${jogadaMaquina}`);
-    console.log(`Numero do jogador ${numJogada}`);
 
-    
     if (jogadaMaquina == 0){
-        alert("Jogador: " + opcao + "\nComputador: PEDRA")
         papelBtn.style.opacity = '0.4';
         tesouraBtn.style.opacity = '0.4';
     } else if (jogadaMaquina == 1){
-        alert("Jogador: " + opcao + "\nComputador: PAPEL")
         pedraBtn.style.opacity = '0.4';
         tesouraBtn.style.opacity = '0.4';
     } else if (jogadaMaquina == 2){
-        alert("Jogador: " + opcao + "\nComputador: TESOURA")
         pedraBtn.style.opacity = '0.4';
         papelBtn.style.opacity = '0.4';
     }
@@ -62,13 +56,23 @@ function jogar(opcao) {
     }else if (jogadaMaquina == 0 && numJogada == 2 || jogadaMaquina == 2 && numJogada == 1 || jogadaMaquina == 1 && numJogada == 0){
         tittle.innerHTML ="Vitória do Computador :("
         
-        player.classList.add('loser')
-        pc.classList.add('winer')
+        player.style.backgroundColor = "#C74141"
+        pc.style.backgroundColor = "#3781C5"
             
     } else if (jogadaMaquina == 2 && numJogada == 0|| jogadaMaquina == 1 && numJogada == 2 || jogadaMaquina == 0 && numJogada == 1){
         tittle.innerHTML ="Vitória do Jogador :)"
 
-        player.classList.add('winer')
-        pc.classList.add('loser')
+        player.style.backgroundColor = "#3781C5"
+        pc.style.backgroundColor = "#C74141"
     }  
+}
+
+function resetGame(){
+    pedraBtn.style.opacity = '1';
+    papelBtn.style.opacity = '1';
+    tesouraBtn.style.opacity = '1';
+
+    pedraBtnPlayer.style.opacity = '1';
+    papelBtnPlayer.style.opacity = '1';
+    tesouraBtnPlayer.style.opacity = '1';
 }
