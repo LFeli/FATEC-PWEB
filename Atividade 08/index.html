@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Avaliação sobre o filme | Lucas Felipe</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="tittle">Faça seu review top 😎</h1>
+            <p class="subtittle">Faça agora aquele review bem top e deixe sua nota de satisfação sobre o filme. 😉</p>
+
+            <form name="formPesquisa" id="pesquisa" action="post" >
+                <div class="wrapper-top">
+                    <div class="wrapper-search-age">
+                        <div class="input-wrapper" id="search">
+                            <label for="search">Nota:</label>
+                            <select name="search" id="usersSearch" required>
+                                <option value="4">Ótimooooo !!!</option>
+                                <option value="3">Bom !</option>
+                                <option value="2">Médio....</option>
+                                <option value="1">Péssimo......</option>
+                            </select>
+                        </div>
+        
+                        <div class="input-wrapper" id="age">
+                            <label for="age">Idade:</label>
+                            <input type="number" name="age" id="userAge" placeholder="Sua idade" required>
+                        </div>
+
+                        <div class="input-wrapper" id="radio">
+                            <label for="sexo">Sexo:</label>
+                            
+                            <div class="inputs-wrapper">
+                                <div class="radio-wrapper">
+                                    <input type="radio" name="sexo" id="Idsexo" value="M" required>
+                                    <label for="">Masculino</label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <input type="radio" name="sexo" id="Idsexo" value="F">
+                                    <label for="">Feminino</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="input-wrapper" id="message">
+                    <label for="message">Mensagem:</label>
+                    <textarea name="message" id="" cols="30" rows="10" form="pesquisa" placeholder="Sua mensagem bonita, aqui"></textarea>
+                </div>
+
+                <button type="button" onclick="run()">Enviar</button>
+        </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="social-medias">
+                    <a href="https://github.com/LFeli" target="_blank"><img src="./assets/Github.svg" alt="Simbolo do github"></a>
+                    <a href="https://www.linkedin.com/in/lf-araujo/" target="_blank"><img src="./assets/Linkedin.svg" alt="Simbolo do linkedin"></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>2023 © Lucas Felipe</span>
+                <span>Todos os direitos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>
