@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reorganizador de números</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="tittle">Descubra os números 😁</h1>
+            <p class="subtittle">Insira três números e descruba o maior número entre eles e na ordem crescente</p>
+
+            <form name="inputsNumber" action="post">
+                <div class="inputs-wrappers">
+                    <div class="input-wrapper">
+                        <label for="number-one">Número 01:</label>
+                        <input type="number" name="number-one" id="number1" placeholder="Primeiro número aqui">
+                    </div>
+    
+                    <div class="input-wrapper">
+                        <label for="number-two">Número 02:</label>
+                        <input type="number" name="number-two" id="number2" placeholder="Segundo número aqui">
+                    </div>
+    
+                    <div class="input-wrapper">
+                        <label for="number-three">Número 03:</label>
+                        <input type="number" name="number-three" id="number3" placeholder="Terceiro número aqui">
+                    </div>
+                </div>
+
+                <button type="button" onclick="run()">Reorganizar</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="social-medias">
+                    <a href="https://github.com/LFeli" target="_blank"><img src="./assets/Github.svg" alt="Simbolo do github"></a>
+                    <a href="https://www.linkedin.com/in/lf-araujo/" target="_blank"><img src="./assets/Linkedin.svg" alt="Simbolo do linkedin"></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>2023 © Lucas Felipe</span>
+                <span>Todos os direitos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>
