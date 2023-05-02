@@ -28,30 +28,41 @@ alert(`
 let nCurrentAccount = new CurrentAccount();
 let nSavingsAccount = new SavingsAccount();
 
-// Insert dates
+// Insert dates from Current Account 
 nCurrentAccount.setAccountHolderName('João Alberto');
 nCurrentAccount.setBank('Banco do Brasil');
 nCurrentAccount.setAccountNumber("001100");
 nCurrentAccount.setBalance(2000);
 nCurrentAccount.setSpecialBalance(300);
 
+// Insert dates from Saving Account
+nSavingsAccount.setJuros(50)
+nSavingsAccount.setExpirationDate("10/06/2023")
+
 alert(`
     Nome correntista: ${nCurrentAccount.getAccountHolderName()} \n
     Banco: ${nCurrentAccount.getBank()} \n
     Número da conta: ${nCurrentAccount.getAccountNumber()} \n
     Saldo: ${nCurrentAccount.getBalance()} \n
-    Saldo especial: ${nCurrentAccount.getSpecialBalance()} \n                  
+    Saldo especial: ${nCurrentAccount.getSpecialBalance()} \n
+    
+    Juros: ${nSavingsAccount.getJuros()} \n
+    Data de vencimento: ${nSavingsAccount.getExpirationDate()} \n
 `);
 
-// remove 200 from Balance
+// remove 200 from Balance and add more juros
 nCurrentAccount.setBalance(2000 - 200);
+nSavingsAccount.setJuros(350)
 
 alert(`
-    [ Após remover 200 do saldo ]
+    [ Após remover 200 do saldo e adicionar 300 de juros]
 
     Nome correntista: ${nCurrentAccount.getAccountHolderName()} \n
     Banco: ${nCurrentAccount.getBank()} \n
     Número da conta: ${nCurrentAccount.getAccountNumber()} \n
     Saldo: ${nCurrentAccount.getBalance()} \n
-    Saldo especial: ${nCurrentAccount.getSpecialBalance()} \n                  
+    Saldo especial: ${nCurrentAccount.getSpecialBalance()} \n       
+    
+    Juros: ${nSavingsAccount.getJuros()} \n
+    Data de vencimento: ${nSavingsAccount.getExpirationDate()} \n
 `);

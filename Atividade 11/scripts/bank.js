@@ -52,21 +52,31 @@ export function CurrentAccount(){
 
     // Get
     this.getSpecialBalance = function(){
-        return specialBalance
+        return specialBalance;
     }
 }
 
 export function SavingsAccount(){
-    let juros;
+    let juros,
+    expirationDate
+    ;
 
     // Set
     this.setJuros = function(value){
         juros = value;
     };
 
+    this.setExpirationDate = function(value){
+        expirationDate = value;
+    }
+
     // Get
     this.getJuros = function(){
-        return juros
+        return juros;
+    }
+
+    this.getExpirationDate = function(){
+        return expirationDate;
     }
 }
 
