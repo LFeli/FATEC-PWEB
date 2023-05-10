@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Atividade 13</title>
+</head>
+<script>
+    
+    function tudoMaiusc(){
+        document.getElementById("texto").value = document.getElementById("texto").value.toUpperCase();
+        document.forms.teste.opcao1.checked = true;
+        document.forms.teste.opcao2.checked = false;
+    }    
+    
+    function tudoMinusc(){
+        document.getElementById("texto").value = document.getElementById("texto").value.toLowerCase();
+        document.forms.teste.opcao1.checked = false;
+        document.forms.teste.opcao2.checked = true;
+    }
+
+</script>
+<body>
+    <form name="teste">
+        texto
+        <input type="text" id="texto" name="texto" size=20 maxlength="20">
+        <br>Maíuscula
+        <input type="checkbox" id="opcao1" name="opcao1" value="1" onclick="tudoMaiusc();">
+        <br>Minúsculas
+        <input type="checkbox" id="opcao2" name="opcao2" value="2" onclick="tudoMinusc();">
+    </form>
+    
+</body>
+</html>
