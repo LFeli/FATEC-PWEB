@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+
+    background-color: #131313;
+    color: #D9D9D9;
+}
+
+main{
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tittle{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.subtittle{
+    text-align: center;
+    line-height: 2rem;
+
+    margin: 3rem auto 0.5rem auto;
+    max-width: 328px;
+}
+
+p{
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], textarea{
+    width: 100%;
+}
+
+input[type="text"], input[type="email"]{
+    height: 2rem;
+}
+
+
+
+form button{
+    width: 176px;
+    height: 60px;
+
+    background: #002A3E;
+    border: none;
+    border-radius: 8px;
+
+    color: #E9E9E9;
+    cursor: pointer;
+
+    transition: background-color 0.5s;
+}
+
+form button:hover{
+    background-color: #001722;
+}
+
+form button:first-of-type{
+    margin-right: 2rem;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin-top: 1rem;
+}
+
+.inputs-wrapper .input-wrapper:nth-of-type(1),.inputs-wrapper .input-wrapper:nth-of-type(2){
+    margin-top: 0;
+}
+
+.inputs-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    margin: 2rem 0;
+}
